@@ -112,5 +112,20 @@ const scrollActive = () =>{
     sr.reveal(`.education__card`,{origin:'right'} )
     sr.reveal(`.education__card`,{origin:'right'} )
 
+    const currentVersion = '1.0';
+
+// Retrieve the stored version from local storage
+const storedVersion = localStorage.getItem('siteVersion');
+
+// Check if the stored version matches the current version
+if (storedVersion !== currentVersion) {
+  // The site has been updated; clear local storage and set the new version.
+  localStorage.clear();
+  localStorage.setItem('siteVersion', currentVersion);
+
+  // You can also notify the user about the update
+  alert('This site has been updated. Please refresh the page to see the changes.');
+}
+
 
 
