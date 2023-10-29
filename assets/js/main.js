@@ -1,3 +1,40 @@
+
+// Clear all cookies
+function clearAllCookies() {
+    const cookies = document.cookie.split(";");
+  
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    }
+  }
+  
+  // Clear local storage
+  function clearLocalStorage() {
+    localStorage.clear();
+  }
+  
+  // Clear browser cache (Note: Not recommended for production use)
+  function clearBrowserCache() {
+    window.location.reload(true);
+  }
+  
+
+  
+  // Your page content and other JavaScript code here
+  
+  // Clear cookies and local storage when the page is reloaded
+  window.addEventListener("beforeunload", function () {
+    // Clear cookies, local storage, and browser cache on page load
+    clearAllCookies();
+    clearLocalStorage();
+    clearBrowserCache();
+  });
+
+
+  //nav menu 
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
@@ -112,39 +149,7 @@ const scrollActive = () =>{
     sr.reveal(`.education__card`,{origin:'right'} )
     sr.reveal(`.education__card`,{origin:'right'} )
 
-// Clear all cookies
-function clearAllCookies() {
-    const cookies = document.cookie.split(";");
-  
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i];
-      const eqPos = cookie.indexOf("=");
-      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-    }
-  }
-  
-  // Clear local storage
-  function clearLocalStorage() {
-    localStorage.clear();
-  }
-  
-  // Clear browser cache (Note: Not recommended for production use)
-  function clearBrowserCache() {
-    window.location.reload(true);
-  }
-  
 
-  
-  // Your page content and other JavaScript code here
-  
-  // Clear cookies and local storage when the page is reloaded
-  window.addEventListener("beforeunload", function () {
-    // Clear cookies, local storage, and browser cache on page load
-    clearAllCookies();
-    clearLocalStorage();
-    clearBrowserCache();
-  });
   
   // Optional: You can also clear cookies and local storage when the page is closed
   // window.addEventListener("unload", function () {
