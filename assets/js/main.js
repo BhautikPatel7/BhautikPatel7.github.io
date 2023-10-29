@@ -112,20 +112,32 @@ const scrollActive = () =>{
     sr.reveal(`.education__card`,{origin:'right'} )
     sr.reveal(`.education__card`,{origin:'right'} )
 
-    const currentVersion = '1.0';
-
-// Retrieve the stored version from local storage
-const storedVersion = localStorage.getItem('siteVersion');
-
-// Check if the stored version matches the current version
-if (storedVersion !== currentVersion) {
-  // The site has been updated; clear local storage and set the new version.
-  localStorage.clear();
-  localStorage.setItem('siteVersion', currentVersion);
-
-  // You can also notify the user about the update
-  alert('This site has been updated. Please refresh the page to see the changes.');
-}
-
-
+// Clear all cookies
+function clearAllCookies() {
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+  }
+  
+  // Clear local storage
+  function clearLocalStorage() {
+    localStorage.clear();
+  }
+  
+  // Clear cookies and local storage when the page is reloaded
+  window.addEventListener("beforeunload", function () {
+    clearAllCookies();
+    clearLocalStorage();
+  });
+  
+  // Optional: You can also clear cookies and local storage when the page is closed
+  // window.addEventListener("unload", function () {
+  //   clearAllCookies();
+  //   clearLocalStorage();
+  // });
+  
 
