@@ -1,27 +1,21 @@
-
-// Clear all cookies
-function clearAllCookies() {
-    const cookies = document.cookie.split(";");
-  
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i];
-      const eqPos = cookie.indexOf("=");
-      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-    }
-  }
-  
-  // Clear local storage
-  function clearLocalStorage() {
+// Clear local storage
+function clearLocalStorage() {
     localStorage.clear();
   }
   
-  // Clear browser cache (Note: Not recommended for production use)
-  function clearBrowserCache() {
-    window.location.reload(true);
+  // Reload the page to start fresh
+  function reloadPage() {
+    location.reload(true);
   }
   
-
+  // Clear local storage and then reload the page
+  function clearLocalStorageAndReload() {
+    clearLocalStorage();
+    //reloadPage();
+  }
+  
+  // Call the clearLocalStorageAndReload function to clear local storage and reload the page
+  clearLocalStorageAndReload();
   
   // Your page content and other JavaScript code here
   
