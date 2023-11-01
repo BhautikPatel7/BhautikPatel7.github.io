@@ -909,7 +909,9 @@ svg {
     text-align: initial;
 
   }
-  .footer_title{font-size: var(--bigger-font-size);
+  
+  }
+  .footer_title {font-size: var(--bigger-font-size);
   
   }
   .footer__social{
@@ -918,7 +920,10 @@ svg {
     
  .footer__copy{
       margin: 0;
-      justify-self: flex-end;
+      justify-self: center;
+    }
+    .footer__copy span{
+      color: var(--first-color);
     }
   .scrollup{
     right: 3rem;
