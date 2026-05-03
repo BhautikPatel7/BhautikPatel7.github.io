@@ -1,0 +1,58 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================
+   Mobile-first approach:
+   - Default:   320px+  (mobile)
+   - sm:        480px+  (large mobile)
+   - md:        768px+  (tablet)
+   - lg:        1024px+ (laptop)
+   - xl:        1280px+ (desktop)
+   - 2xl:       1536px+ (large desktop)
+   ============================================ */
+
+/* ---- SMALL MOBILE (480px+) ---- */
+@media (min-width: 480px) {
+  .container {
+    padding: 0 var(--space-8);
+  }
+}
+
+/* ---- TABLET (768px+) ---- */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-10);
+  }
+}
+
+/* ---- LAPTOP (1024px+) ---- */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-12);
+  }
+}
+
+/* ---- Hide on mobile ---- */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* ---- Hide on desktop ---- */
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* ---- Disable custom cursor on touch devices ---- */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+  body {
+    cursor: auto !important;
+  }
+}

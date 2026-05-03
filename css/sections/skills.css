@@ -1,0 +1,251 @@
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+
+.skills {
+  position: relative;
+  background: var(--bg-deep);
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-default), transparent);
+}
+
+/* ---- Bento Grid Layout ---- */
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+}
+
+/* Card base */
+.skills__card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.skills__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--card-accent, var(--gradient-primary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skills__card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.skills__card:hover::before {
+  opacity: 1;
+}
+
+/* Card accent colors */
+.skills__card--ai       { --card-accent: linear-gradient(90deg, #6366f1, #8b5cf6); }
+.skills__card--framework { --card-accent: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+.skills__card--lang     { --card-accent: linear-gradient(90deg, #06b6d4, #22d3ee); }
+.skills__card--backend  { --card-accent: linear-gradient(90deg, #10b981, #34d399); }
+.skills__card--cloud    { --card-accent: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.skills__card--db       { --card-accent: linear-gradient(90deg, #f43f5e, #fb7185); }
+.skills__card--mobile   { --card-accent: linear-gradient(90deg, #06b6d4, #6366f1); }
+.skills__card--tools    { --card-accent: linear-gradient(90deg, #94a3b8, #cbd5e1); }
+
+/* Bento sizes */
+.skills__card--lg {
+  grid-column: span 8;
+}
+
+.skills__card--md {
+  grid-column: span 4;
+}
+
+.skills__card--half {
+  grid-column: span 6;
+}
+
+.skills__card--sm {
+  grid-column: span 3;
+}
+
+/* Card header */
+.skills__card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.skills__card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+.skills__card--ai .skills__card-icon       { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+.skills__card--framework .skills__card-icon { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+.skills__card--lang .skills__card-icon      { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
+.skills__card--backend .skills__card-icon   { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.skills__card--cloud .skills__card-icon     { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+.skills__card--db .skills__card-icon        { background: rgba(244, 63, 94, 0.15); color: #fb7185; }
+.skills__card--mobile .skills__card-icon    { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
+.skills__card--tools .skills__card-icon     { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; }
+
+.skills__card-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.skills__card-subtitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Skill tags inside card */
+.skills__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.skills__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s var(--ease-out-expo);
+  letter-spacing: 0.01em;
+}
+
+.skills__tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-default);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* Special: AI card highlighted tag */
+.skills__card--ai .skills__tag {
+  background: rgba(99, 102, 241, 0.08);
+  border-color: rgba(99, 102, 241, 0.12);
+}
+
+.skills__card--ai .skills__tag:hover {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.25);
+  color: #c7d2fe;
+}
+
+/* ---- AI card special large styling ---- */
+
+.skills__card--ai {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(139, 92, 246, 0.04), var(--glass-bg));
+  border-color: rgba(99, 102, 241, 0.12);
+}
+
+.skills__card--ai:hover {
+  border-color: rgba(99, 102, 241, 0.25);
+  box-shadow: var(--shadow-glow);
+}
+
+.skills__card--ai .skills__card-title {
+  font-size: var(--text-lg);
+}
+
+/* AI card neural decoration */
+.skills__card--ai::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- Bottom note ---- */
+
+.skills__note {
+  text-align: center;
+  margin-top: var(--space-10);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.skills__note span {
+  color: var(--primary-400);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 767px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .skills__card--lg,
+  .skills__card--md,
+  .skills__card--half,
+  .skills__card--sm {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .skills__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .skills__card--lg {
+    grid-column: span 6;
+  }
+
+  .skills__card--md {
+    grid-column: span 3;
+  }
+
+  .skills__card--half {
+    grid-column: span 3;
+  }
+
+  .skills__card--sm {
+    grid-column: span 3;
+  }
+}

@@ -1,0 +1,383 @@
+/* ============================================
+   EXPERIENCE TIMELINE SECTION
+   ============================================ */
+
+.experience {
+  position: relative;
+  background: var(--bg-base);
+}
+
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-default), transparent);
+}
+
+.experience .section-subtitle {
+  margin-bottom: var(--space-4);
+}
+
+/* ---- Timeline Container ---- */
+
+.timeline {
+  position: relative;
+  margin-top: var(--space-12);
+  padding: 0;
+}
+
+/* Vertical glowing line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--primary-500) 10%,
+    var(--primary-500) 90%,
+    transparent
+  );
+  transform: translateX(-50%);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+/* ---- Timeline Item ---- */
+
+.timeline__item {
+  position: relative;
+  width: 50%;
+  padding: 0 var(--space-10) var(--space-12) var(--space-10);
+}
+
+/* Left side items */
+.timeline__item--left {
+  left: 0;
+  padding-right: var(--space-12);
+  text-align: right;
+}
+
+/* Right side items */
+.timeline__item--right {
+  left: 50%;
+  padding-left: var(--space-12);
+  text-align: left;
+}
+
+/* ---- Timeline Dot ---- */
+
+.timeline__dot {
+  position: absolute;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-base);
+  border: 3px solid var(--primary-500);
+  z-index: 2;
+  box-shadow: 0 0 12px var(--primary-glow);
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.timeline__item--left .timeline__dot {
+  right: -8px;
+}
+
+.timeline__item--right .timeline__dot {
+  left: -8px;
+}
+
+.timeline__item:hover .timeline__dot {
+  background: var(--primary-500);
+  box-shadow: 0 0 20px var(--primary-glow), 0 0 40px rgba(99, 102, 241, 0.15);
+  transform: scale(1.3);
+}
+
+/* Education dot (different color) */
+.timeline__item--edu .timeline__dot {
+  border-color: var(--accent-500);
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.timeline__item--edu:hover .timeline__dot {
+  background: var(--accent-500);
+  box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(6, 182, 212, 0.15);
+}
+
+/* ---- Timeline Card ---- */
+
+.timeline__card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+}
+
+.timeline__card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card connector arrow */
+.timeline__item--left .timeline__card::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--glass-bg);
+  border-right: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  transform: rotate(-45deg);
+}
+
+.timeline__item--right .timeline__card::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--glass-bg);
+  border-left: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-border);
+  transform: rotate(-45deg);
+}
+
+/* ---- Card Content ---- */
+
+.timeline__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-3);
+  letter-spacing: var(--tracking-wide);
+}
+
+.timeline__badge--work {
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--primary-400);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.timeline__badge--edu {
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--accent-400);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+.timeline__role {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.timeline__company {
+  font-size: var(--text-base);
+  color: var(--primary-400);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-1);
+}
+
+.timeline__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.timeline__item--left .timeline__meta {
+  justify-content: flex-end;
+}
+
+.timeline__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.timeline__meta-item i {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.timeline__description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.timeline__description ul {
+  padding-left: 0;
+}
+
+.timeline__item--left .timeline__description ul {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.timeline__description li {
+  position: relative;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-normal);
+}
+
+.timeline__item--left .timeline__description li {
+  padding-left: 0;
+  padding-right: var(--space-5);
+}
+
+.timeline__description li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--primary-400);
+  font-size: var(--text-sm);
+}
+
+.timeline__item--left .timeline__description li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Tech pills in timeline */
+.timeline__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.timeline__item--left .timeline__tech {
+  justify-content: flex-end;
+}
+
+.timeline__tech .pill {
+  font-size: 0.65rem;
+  padding: 2px var(--space-2);
+}
+
+/* ---- Education Card Special ---- */
+
+.timeline__item--edu .timeline__card {
+  border-color: rgba(6, 182, 212, 0.12);
+}
+
+.timeline__item--edu .timeline__card:hover {
+  border-color: rgba(6, 182, 212, 0.25);
+}
+
+.timeline__cgpa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--accent-400);
+  margin-top: var(--space-2);
+}
+
+.timeline__cgpa-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+}
+
+/* ---- Timeline end dot ---- */
+
+.timeline__end {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.timeline__end-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 12px var(--primary-glow);
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 1023px) {
+  /* Single column timeline */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline__item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 56px;
+    padding-right: 0;
+    text-align: left !important;
+  }
+
+  .timeline__item--left,
+  .timeline__item--right {
+    padding-left: 56px;
+    padding-right: 0;
+  }
+
+  .timeline__dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+
+  .timeline__item--left .timeline__card::after,
+  .timeline__item--right .timeline__card::after {
+    left: -8px;
+    right: auto;
+    border-left: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-border);
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .timeline__item--left .timeline__meta {
+    justify-content: flex-start;
+  }
+
+  .timeline__item--left .timeline__tech {
+    justify-content: flex-start;
+  }
+
+  .timeline__item--left .timeline__description li {
+    padding-left: var(--space-5);
+    padding-right: 0;
+  }
+
+  .timeline__item--left .timeline__description li::before {
+    left: 0;
+    right: auto;
+  }
+}

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <title>Bhautik Thummar — AI/ML Engineer & Software Developer</title>
+  <meta name="description" content="Portfolio of Bhautik Thummar — Software Engineer & AI/ML Engineer based in Ahmedabad, India. Specializing in Machine Learning, Deep Learning, Generative AI, Agentic AI, and Computer Vision.">
+  <meta name="keywords" content="Bhautik Thummar, AI Engineer, ML Engineer, Software Engineer, Deep Learning, Computer Vision, Generative AI, Ahmedabad, Portfolio">
+  <meta name="author" content="Bhautik Thummar">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0a1a">
+  <link rel="canonical" href="https://bhautikpatel7.github.io">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bhautik Thummar — AI/ML Engineer">
+  <meta property="og:description" content="Software Engineer & AI/ML Engineer specializing in Deep Learning, Generative AI, Agentic AI, and Computer Vision.">
+  <meta property="og:url" content="https://bhautikpatel7.github.io">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bhautik Thummar — AI/ML Engineer">
+  <meta name="twitter:description" content="Software Engineer & AI/ML Engineer specializing in Deep Learning, Generative AI, and Computer Vision.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/sections/hero.css">
+  <link rel="stylesheet" href="css/sections/about.css">
+  <link rel="stylesheet" href="css/sections/skills.css">
+  <link rel="stylesheet" href="css/sections/timeline.css">
+  <link rel="stylesheet" href="css/sections/projects.css">
+  <link rel="stylesheet" href="css/sections/other-projects.css">
+  <link rel="stylesheet" href="css/sections/contact.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bhautik Thummar",
+    "jobTitle": "Software Engineer & AI/ML Engineer",
+    "url": "https://bhautikpatel7.github.io",
+    "email": "thummarbhautik7045@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ahmedabad",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://github.com/BhautikPatel7",
+      "https://www.linkedin.com/in/thummar-bhautik-b3179023a/"
+    ],
+    "knowsAbout": ["Machine Learning", "Deep Learning", "Generative AI", "Agentic AI", "Computer Vision", "Python", "Flask", "FastAPI"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ======== PRELOADER ======== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__monogram">BT</div>
+  </div>
+
+  <!-- ======== CUSTOM CURSOR ======== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ======== SCROLL PROGRESS ======== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ======== NAVIGATION ======== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner container">
+      <a href="#hero" class="navbar__logo" id="navLogo" aria-label="Go to top">
+        <span class="navbar__logo-text">BT</span>
+      </a>
+
+      <ul class="navbar__links hide-mobile" id="navLinks">
+        <li><a href="#about" class="navbar__link" data-section="about">About</a></li>
+        <li><a href="#skills" class="navbar__link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="navbar__link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="navbar__link" data-section="projects">Projects</a></li>
+        <li><a href="#contact" class="navbar__link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="assets/resume.pdf" class="btn btn--outline btn--sm hide-mobile" download>
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <button class="navbar__hamburger hide-desktop" id="hamburgerBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ======== MOBILE MENU OVERLAY ======== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#skills" class="mobile-menu__link">Skills</a></li>
+      <li><a href="#experience" class="mobile-menu__link">Experience</a></li>
+      <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+    </ul>
+    <a href="assets/resume.pdf" class="btn btn--primary" download>
+      <i class="fa-solid fa-download"></i> Download Resume
+    </a>
+  </div>
+
+  <!-- ======== SIDE DOT NAVIGATION ======== -->
+  <nav class="side-dots hide-mobile" id="sideDots" aria-label="Section navigation">
+    <a href="#hero" class="side-dots__dot active" data-section="hero" aria-label="Hero"><span>Home</span></a>
+    <a href="#about" class="side-dots__dot" data-section="about" aria-label="About"><span>About</span></a>
+    <a href="#skills" class="side-dots__dot" data-section="skills" aria-label="Skills"><span>Skills</span></a>
+    <a href="#experience" class="side-dots__dot" data-section="experience" aria-label="Experience"><span>Experience</span></a>
+    <a href="#projects" class="side-dots__dot" data-section="projects" aria-label="Projects"><span>Projects</span></a>
+    <a href="#contact" class="side-dots__dot" data-section="contact" aria-label="Contact"><span>Contact</span></a>
+  </nav>
+
+  <!-- ======== MAIN CONTENT ======== -->
+  <main>
+
+    <!-- ===== SECTION: HERO ===== -->
+    <section id="hero" class="hero">
+      <!-- Background layers -->
+      <div class="hero__grid-bg"></div>
+
+      <!-- Floating ML code snippets -->
+      <span class="hero__float-code" data-parallax="-0.08">model.fit(X_train, y_train)</span>
+      <span class="hero__float-code" data-parallax="-0.12">torch.nn.Sequential()</span>
+      <span class="hero__float-code" data-parallax="-0.06">pipeline("text-generation")</span>
+      <span class="hero__float-code" data-parallax="-0.10">cv2.imread(frame)</span>
+      <span class="hero__float-code" data-parallax="-0.14">agent.run(task)</span>
+      <span class="hero__float-code" data-parallax="-0.07">loss.backward()</span>
+
+      <!-- Large BT watermark -->
+      <div class="hero__watermark" aria-hidden="true">BT</div>
+
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting mono">Hello, I'm</p>
+          <h1 class="hero__name">Bhautik<br><span class="gradient-text--hero">Thummar</span></h1>
+          <div class="hero__role">
+            <span class="hero__role-prefix mono">&gt;_</span>
+            <span class="hero__role-text" id="typingText"></span>
+            <span class="hero__cursor">|</span>
+          </div>
+          <p class="hero__tagline">Crafting intelligent systems that transform data into decisions.</p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">Explore My Work <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="assets/resume.pdf" class="btn btn--outline" download>Download Resume <i class="fa-solid fa-download"></i></a>
+          </div>
+          <div class="hero__socials">
+            <a href="https://github.com/BhautikPatel7" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/thummar-bhautik-b3179023a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:thummarbhautik7045@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator">
+        <span class="mono">scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: ABOUT ===== -->
+    <section id="about" class="about">
+      <div class="container">
+        <span class="section-label reveal-wipe">about me</span>
+        <h2 class="section-title reveal">Building the Future with <span class="gradient-text">Intelligence</span></h2>
+
+        <div class="about__grid">
+          <!-- Left Column: Bio -->
+          <div class="about__bio reveal-left">
+            <div class="about__avatar" aria-hidden="true">BT</div>
+
+            <p class="about__text">
+              I'm a <strong>Software Engineer</strong> and <span class="highlight">AI/ML Engineer</span> based in Ahmedabad, India, with <strong>2.5+ years</strong> of experience turning complex problems into intelligent solutions.
+            </p>
+            <p class="about__text">
+              My world revolves around <span class="highlight">Deep Learning</span>, <span class="highlight--accent">Computer Vision</span>, <span class="highlight">Generative AI</span>, and <span class="highlight--accent">Agentic AI</span> — building systems that don't just process data, but actually <em>understand</em> it. From training neural networks to deploying production-grade ML pipelines, I enjoy every layer of the stack.
+            </p>
+            <p class="about__text">
+              When I'm not wrangling tensors, you'll find me exploring the latest research papers, building Flutter apps, or experimenting with new AI frameworks. I believe the best engineers are the ones who never stop being curious.
+            </p>
+
+            <!-- Terminal block -->
+            <div class="about__terminal">
+              <div class="about__terminal-bar">
+                <span class="about__terminal-dot"></span>
+                <span class="about__terminal-dot"></span>
+                <span class="about__terminal-dot"></span>
+                <span class="about__terminal-title">bhautik@dev ~</span>
+              </div>
+              <div class="about__terminal-body">
+                <span class="prompt">$</span> <span class="keyword">cat</span> bhautik.yaml<br>
+                <br>
+                <span class="keyword">name:</span> <span class="string">"Bhautik Thummar"</span><br>
+                <span class="keyword">role:</span> <span class="string">"AI/ML Engineer"</span><br>
+                <span class="keyword">location:</span> <span class="string">"Ahmedabad, IN"</span><br>
+                <span class="keyword">languages:</span> [<span class="string">"Python"</span>, <span class="string">"JS"</span>, <span class="string">"Dart"</span>]<br>
+                <span class="keyword">superpower:</span> <span class="string">"Making machines see & think"</span><br>
+                <span class="keyword">coffee_per_day:</span> <span class="variable">∞</span> <span class="comment"># non-negotiable</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Stats + Info -->
+          <div class="about__sidebar reveal-right">
+            <div class="about__stats">
+              <div class="about__stat glass-card reveal-flip">
+                <span class="about__stat-number" data-count="2.5" data-suffix="+">0</span>
+                <span class="about__stat-label">Years Exp</span>
+              </div>
+              <div class="about__stat glass-card reveal-flip stagger-1">
+                <span class="about__stat-number" data-count="15" data-suffix="+">0</span>
+                <span class="about__stat-label">Projects</span>
+              </div>
+            <div class="about__stat glass-card reveal-flip stagger-1">
+                <span class="about__stat-number" data-count="20" data-suffix="+">0</span>
+                <span class="about__stat-label">Technologies</span>
+              </div>
+            <div class="about__stat glass-card reveal-flip stagger-2">
+                <span class="about__stat-number" data-count="8.5" data-suffix="">0</span>
+                <span class="about__stat-label">CGPA</span>
+              </div>
+            </div>
+
+            <div class="about__info-cards">
+              <div class="about__info-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="about__info-card-content">
+                  <span class="about__info-card-label">Location</span>
+                  <span class="about__info-card-value">Ahmedabad, India</span>
+                </div>
+              </div>
+              <div class="about__info-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="about__info-card-content">
+                  <span class="about__info-card-label">Education</span>
+                  <span class="about__info-card-value">B.E. — Gujarat Technological University</span>
+                </div>
+              </div>
+              <div class="about__info-card">
+                <i class="fa-solid fa-briefcase"></i>
+                <div class="about__info-card-content">
+                  <span class="about__info-card-label">Current Role</span>
+                  <span class="about__info-card-value">Software & AI/ML Engineer</span>
+                </div>
+              </div>
+              <div class="about__info-card">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="about__info-card-content">
+                  <span class="about__info-card-label">Email</span>
+                  <span class="about__info-card-value">thummarbhautik7045@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION: SKILLS ===== -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <span class="section-label reveal-wipe">tech stack</span>
+        <h2 class="section-title reveal">Skills & <span class="gradient-text">Expertise</span></h2>
+
+        <div class="skills__grid">
+
+          <!-- AI/ML Core — LARGE CARD -->
+          <div class="skills__card skills__card--ai skills__card--lg reveal-glow">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-brain"></i></div>
+              <div>
+                <div class="skills__card-title">AI / ML Core</div>
+                <div class="skills__card-subtitle">primary expertise</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+              <span class="skills__tag"><i class="fa-solid fa-network-wired"></i> Deep Learning</span>
+              <span class="skills__tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Generative AI</span>
+              <span class="skills__tag"><i class="fa-solid fa-microchip"></i> Agentic AI</span>
+              <span class="skills__tag"><i class="fa-solid fa-eye"></i> Computer Vision</span>
+              <span class="skills__tag"><i class="fa-solid fa-language"></i> NLP</span>
+            </div>
+          </div>
+
+          <!-- Frameworks -->
+          <div class="skills__card skills__card--framework skills__card--md reveal-flip stagger-1">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <div>
+                <div class="skills__card-title">Frameworks</div>
+                <div class="skills__card-subtitle">ml & ai tools</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">TensorFlow</span>
+              <span class="skills__tag">PyTorch</span>
+              <span class="skills__tag">Scikit-learn</span>
+              <span class="skills__tag">Keras</span>
+              <span class="skills__tag">LangChain</span>
+              <span class="skills__tag">CrewAI</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="skills__card skills__card--lang skills__card--half reveal-flip stagger-2">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <div class="skills__card-title">Languages</div>
+                <div class="skills__card-subtitle">polyglot developer</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="skills__tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="skills__tag"><i class="fa-solid fa-database"></i> SQL</span>
+              <span class="skills__tag">Dart</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skills__card skills__card--backend skills__card--half reveal-flip stagger-3">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-server"></i></div>
+              <div>
+                <div class="skills__card-title">Backend</div>
+                <div class="skills__card-subtitle">api & services</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">Flask</span>
+              <span class="skills__tag">FastAPI</span>
+              <span class="skills__tag">Django</span>
+              <span class="skills__tag">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Cloud / MLOps -->
+          <div class="skills__card skills__card--cloud skills__card--sm reveal stagger-4">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-cloud"></i></div>
+              <div>
+                <div class="skills__card-title">Cloud & MLOps</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">AWS</span>
+              <span class="skills__tag">GCP</span>
+              <span class="skills__tag">Docker</span>
+              <span class="skills__tag">MLflow</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skills__card skills__card--db skills__card--sm reveal stagger-5">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-database"></i></div>
+              <div>
+                <div class="skills__card-title">Databases</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">PostgreSQL</span>
+              <span class="skills__tag">MongoDB</span>
+              <span class="skills__tag">Redis</span>
+            </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="skills__card skills__card--mobile skills__card--sm reveal stagger-6">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+              <div>
+                <div class="skills__card-title">Mobile</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">Flutter</span>
+              <span class="skills__tag">Dart</span>
+              <span class="skills__tag">Android</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills__card skills__card--tools skills__card--sm reveal stagger-7">
+            <div class="skills__card-header">
+              <div class="skills__card-icon"><i class="fa-solid fa-wrench"></i></div>
+              <div>
+                <div class="skills__card-title">Tools</div>
+              </div>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">Git</span>
+              <span class="skills__tag">GitHub</span>
+              <span class="skills__tag">VS Code</span>
+              <span class="skills__tag">Jupyter</span>
+              <span class="skills__tag">Linux</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="skills__note reveal"><span>&gt;</span> always learning, always building_</p>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION: EXPERIENCE ===== -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <span class="section-label reveal-wipe">journey</span>
+        <h2 class="section-title reveal">Experience & <span class="gradient-text">Education</span></h2>
+
+        <div class="timeline">
+
+          <!-- Work Experience 1 (Current) -->
+          <div class="timeline__item timeline__item--left reveal-left">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__badge timeline__badge--work"><i class="fa-solid fa-briefcase"></i> Work</span>
+              <h3 class="timeline__role">Software & AI/ML Engineer</h3>
+              <p class="timeline__company">Ahmedabad, India</p>
+              <div class="timeline__meta">
+                <span class="timeline__meta-item"><i class="fa-regular fa-calendar"></i> 2022 – Present</span>
+                <span class="timeline__meta-item"><i class="fa-regular fa-clock"></i> 2.5+ years</span>
+              </div>
+              <div class="timeline__description">
+                <ul>
+                  <li>Designed and deployed production-grade ML/DL models for real-world applications</li>
+                  <li>Built computer vision pipelines for image recognition and object detection systems</li>
+                  <li>Developed Generative AI & Agentic AI solutions using LangChain and CrewAI</li>
+                  <li>Created scalable REST APIs with Flask and FastAPI for model serving</li>
+                  <li>Collaborated with cross-functional teams to deliver AI-powered products</li>
+                </ul>
+              </div>
+              <div class="timeline__tech">
+                <span class="pill">Python</span>
+                <span class="pill">PyTorch</span>
+                <span class="pill">TensorFlow</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">Docker</span>
+                <span class="pill pill--accent">Computer Vision</span>
+                <span class="pill pill--accent">Gen AI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work Experience 2 (Earlier) -->
+          <div class="timeline__item timeline__item--right reveal-right">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__badge timeline__badge--work"><i class="fa-solid fa-code"></i> Work</span>
+              <h3 class="timeline__role">Software Developer</h3>
+              <p class="timeline__company">Ahmedabad, India</p>
+              <div class="timeline__meta">
+                <span class="timeline__meta-item"><i class="fa-regular fa-calendar"></i> 2020 – 2022</span>
+              </div>
+              <div class="timeline__description">
+                <ul>
+                  <li>Built and maintained web applications using Python backend frameworks</li>
+                  <li>Developed Flutter mobile applications published on Google Play Store</li>
+                  <li>Implemented database design and optimization for PostgreSQL and MongoDB</li>
+                  <li>Started exploring Machine Learning and Deep Learning technologies</li>
+                </ul>
+              </div>
+              <div class="timeline__tech">
+                <span class="pill">Python</span>
+                <span class="pill">Flask</span>
+                <span class="pill">Flutter</span>
+                <span class="pill">PostgreSQL</span>
+                <span class="pill">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline__item timeline__item--left timeline__item--edu reveal-left">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <span class="timeline__badge timeline__badge--edu"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+              <h3 class="timeline__role">Bachelor of Engineering (B.E.)</h3>
+              <p class="timeline__company">Gujarat Technological University (GTU)</p>
+              <div class="timeline__meta">
+                <span class="timeline__meta-item"><i class="fa-regular fa-calendar"></i> Graduated 2020</span>
+                <span class="timeline__meta-item"><i class="fa-solid fa-location-dot"></i> Gujarat, India</span>
+              </div>
+              <div class="timeline__description">
+                <ul>
+                  <li>Completed Bachelor's degree in Engineering with strong academic performance</li>
+                  <li>Built foundational knowledge in programming, data structures, and algorithms</li>
+                  <li>Developed interest in Machine Learning and Artificial Intelligence</li>
+                </ul>
+              </div>
+              <div class="timeline__cgpa">
+                <span>8.50</span>
+                <span class="timeline__cgpa-label">CGPA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline end -->
+          <div class="timeline__end">
+            <div class="timeline__end-dot"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION: AI/ML PROJECTS (STAR) ===== -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <span class="section-label reveal-wipe">featured work</span>
+        <h2 class="section-title reveal"><span class="gradient-text">AI/ML</span> Projects</h2>
+        <p class="section-subtitle reveal">Where machine learning meets real-world impact.</p>
+
+        <!-- Filter Bar -->
+        <div class="projects__filters reveal">
+          <button class="projects__filter-btn active" data-filter="all">All</button>
+          <button class="projects__filter-btn" data-filter="cv">Computer Vision</button>
+          <button class="projects__filter-btn" data-filter="nlp">NLP</button>
+          <button class="projects__filter-btn" data-filter="genai">Generative AI</button>
+          <button class="projects__filter-btn" data-filter="agentic">Agentic AI</button>
+          <button class="projects__filter-btn" data-filter="dl">Deep Learning</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects__grid">
+
+          <!-- PROJECT 1: Computer Vision -->
+          <div class="project-card project-card--cv reveal-flip" data-category="cv">
+            <div class="project-card__image">
+              <div class="project-card__image-placeholder">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <span class="project-card__category">Computer Vision</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Image Recognition System</h3>
+              <p class="project-card__desc">Built a deep learning-based image recognition pipeline capable of real-time object detection and classification with high accuracy.</p>
+              <div class="project-card__metrics">
+                <div class="project-card__metric">
+                  <span class="project-card__metric-value">95%</span>
+                  <span class="project-card__metric-label">Accuracy</span>
+                </div>
+                <div class="project-card__metric">
+                  <span class="project-card__metric-value">30fps</span>
+                  <span class="project-card__metric-label">Real-time</span>
+                </div>
+              </div>
+              <div class="project-card__tech">
+                <span class="pill">Python</span>
+                <span class="pill">PyTorch</span>
+                <span class="pill">OpenCV</span>
+                <span class="pill">YOLO</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="project-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Generative AI -->
+          <div class="project-card project-card--genai reveal-flip stagger-1" data-category="genai">
+            <div class="project-card__image">
+              <div class="project-card__image-placeholder">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <span class="project-card__category">Generative AI</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">AI Content Generator</h3>
+              <p class="project-card__desc">Developed a generative AI application using LLMs for intelligent content creation, summarization, and question-answering with RAG pipeline.</p>
+              <div class="project-card__metrics">
+                <div class="project-card__metric">
+                  <span class="project-card__metric-value">RAG</span>
+                  <span class="project-card__metric-label">Pipeline</span>
+                </div>
+                <div class="project-card__metric">
+                  <span class="project-card__metric-value">LLM</span>
+                  <span class="project-card__metric-label">Powered</span>
+                </div>
+              </div>
+              <div class="project-card__tech">
+                <span class="pill">LangChain</span>
+                <span class="pill">Python</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">ChromaDB</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="project-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Agentic AI -->
+          <div class="project-card project-card--agentic reveal-flip stagger-2" data-category="agentic">
+            <div class="project-card__image">
+              <div class="project-card__image-placeholder">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <span class="project-card__category">Agentic AI</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Multi-Agent Task Orchestrator</h3>
+              <p class="project-card__desc">Created an autonomous multi-agent system that breaks down complex tasks, assigns them to specialized AI agents, and orchestrates their execution.</p>
+              <div class="project-card__metrics">
+                <div class="project-card__metric">
+                  <span class="project-card__metric-value">5+</span>
+                  <span class="project-card__metric-label">Agents</span>
+                </div>
+                <div class="project-card__metric">
+                  <span class="project-card__metric-value">Auto</span>
+                  <span class="project-card__metric-label">Orchestration</span>
+                </div>
+              </div>
+              <div class="project-card__tech">
+                <span class="pill">CrewAI</span>
+                <span class="pill">LangChain</span>
+                <span class="pill">Python</span>
+                <span class="pill">FastAPI</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="project-card__link"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="project-card__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="projects__cta reveal">
+          <p class="projects__cta-text">More projects on GitHub →</p>
+          <a href="https://github.com/BhautikPatel7" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <i class="fa-brands fa-github"></i> View All on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION: OTHER PROJECTS ===== -->
+    <section id="other-projects" class="other-projects">
+      <div class="container">
+        <span class="section-label reveal-wipe">more work</span>
+        <h2 class="section-title reveal">Other <span class="gradient-text">Projects</span></h2>
+
+        <div class="other-projects__grid">
+
+          <!-- Flutter Expense Manager -->
+          <div class="mini-card mini-card--flutter reveal">
+            <div class="mini-card__header">
+              <div class="mini-card__icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <div class="mini-card__links-top">
+                <a href="#" class="mini-card__link-icon" aria-label="Play Store"><i class="fa-brands fa-google-play"></i></a>
+                <a href="#" class="mini-card__link-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="mini-card__title">Expense Manager</h3>
+            <p class="mini-card__desc">A feature-rich Flutter application for tracking personal expenses, managing budgets, and visualizing spending patterns. Published on Google Play Store.</p>
+            <div class="mini-card__tech">
+              <span class="pill">Flutter</span>
+              <span class="pill">Dart</span>
+              <span class="pill">Hive</span>
+              <span class="pill">Provider</span>
+            </div>
+            <a href="#" class="mini-card__badge">
+              <i class="fa-brands fa-google-play"></i> Available on Play Store
+            </a>
+          </div>
+
+          <!-- Web Portfolio (this site) -->
+          <div class="mini-card mini-card--web reveal stagger-1">
+            <div class="mini-card__header">
+              <div class="mini-card__icon">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="mini-card__links-top">
+                <a href="#" class="mini-card__link-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="mini-card__title">Portfolio Website</h3>
+            <p class="mini-card__desc">This very website! A hand-crafted, premium dark-themed portfolio built with vanilla HTML, CSS, and JavaScript. No frameworks, no templates.</p>
+            <div class="mini-card__tech">
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">GitHub Pages</span>
+            </div>
+          </div>
+
+          <!-- Add More Placeholder -->
+          <div class="mini-card mini-card--add reveal stagger-2">
+            <div class="mini-card__add-icon">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <span class="mini-card__add-text">More projects coming soon...</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== SECTION: CONTACT ===== -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <span class="section-label reveal-wipe">get in touch</span>
+        <h2 class="section-title reveal">Let’s Build Something <span class="gradient-text">Intelligent</span></h2>
+
+        <div class="contact__grid">
+
+          <!-- Left: Info -->
+          <div class="contact__info reveal-left">
+            <p class="contact__intro">
+              Have a project idea, a job opportunity, or just want to chat about AI? <strong>I'd love to hear from you.</strong> Drop me a message and I'll get back within 24 hours.
+            </p>
+
+            <div class="contact__items">
+              <div class="contact__item">
+                <div class="contact__item-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact__item-content">
+                  <span class="contact__item-label">Email</span>
+                  <span class="contact__item-value"><a href="mailto:thummarbhautik7045@gmail.com">thummarbhautik7045@gmail.com</a></span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact__item-content">
+                  <span class="contact__item-label">Location</span>
+                  <span class="contact__item-value">Ahmedabad, India</span>
+                </div>
+              </div>
+              <div class="contact__item">
+                <div class="contact__item-icon"><i class="fa-solid fa-clock"></i></div>
+                <div class="contact__item-content">
+                  <span class="contact__item-label">Availability</span>
+                  <span class="contact__item-value">Open to freelance & full-time</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__socials">
+              <a href="https://github.com/BhautikPatel7" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/thummar-bhautik-b3179023a/" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:thummarbhautik7045@gmail.com" class="contact__social-link" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact__form-wrapper reveal-right">
+            <form id="contactForm" class="contact__form" action="https://formspree.io/f/xykoklnr" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-group__label" for="contactName">Name *</label>
+                  <input class="form-group__input" type="text" id="contactName" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-group__label" for="contactEmail">Email *</label>
+                  <input class="form-group__input" type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-group__label" for="contactSubject">Subject</label>
+                <input class="form-group__input" type="text" id="contactSubject" name="subject" placeholder="What's this about?">
+              </div>
+              <div class="form-group">
+                <label class="form-group__label" for="contactMessage">Message *</label>
+                <textarea class="form-group__textarea" id="contactMessage" name="message" placeholder="Tell me about your project or idea..." required></textarea>
+              </div>
+              <button type="submit" class="contact__submit">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="currentYear"></span> Bhautik Thummar. Designed & crafted with precision.</p>
+      <div class="footer__socials">
+        <a href="https://github.com/BhautikPatel7" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/thummar-bhautik-b3179023a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:thummarbhautik7045@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======== BACK TO TOP ======== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts (deferred for performance) -->
+  <script src="js/cursor.js" defer></script>
+  <script src="js/typing.js" defer></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/about.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

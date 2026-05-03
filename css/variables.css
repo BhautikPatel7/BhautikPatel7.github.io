@@ -1,0 +1,164 @@
+/* ============================================
+   DESIGN TOKENS — "Neural Dark" Theme
+   Bhautik Thummar Portfolio
+   ============================================ */
+
+:root {
+  /* ---- COLORS ---- */
+  
+  /* Backgrounds — layered depth */
+  --bg-void:        #06060b;
+  --bg-deep:        #0a0a12;
+  --bg-base:        #0e0e18;
+  --bg-surface:     #131321;
+  --bg-elevated:    #1a1a2e;
+  --bg-hover:       #22223a;
+  
+  /* Borders */
+  --border-subtle:  rgba(255, 255, 255, 0.04);
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-strong:  rgba(255, 255, 255, 0.14);
+  
+  /* Primary — Indigo/Violet */
+  --primary-400:    #818cf8;
+  --primary-500:    #6366f1;
+  --primary-600:    #4f46e5;
+  --primary-glow:   rgba(99, 102, 241, 0.25);
+  
+  /* Accent — Cyan */
+  --accent-400:     #22d3ee;
+  --accent-500:     #06b6d4;
+  --accent-600:     #0891b2;
+  --accent-glow:    rgba(6, 182, 212, 0.25);
+  
+  /* Secondary — Emerald */
+  --secondary-400:  #34d399;
+  --secondary-500:  #10b981;
+  --secondary-glow: rgba(16, 185, 129, 0.20);
+  
+  /* Warm — Amber (for warnings, highlights) */
+  --warm-400:       #fbbf24;
+  --warm-500:       #f59e0b;
+  
+  /* Rose (for special accents) */
+  --rose-400:       #fb7185;
+  --rose-500:       #f43f5e;
+  --rose-glow:      rgba(244, 63, 94, 0.20);
+  
+  /* Text */
+  --text-primary:   #eef2ff;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+  --text-accent:    var(--primary-400);
+  
+  /* Gradients */
+  --gradient-primary:    linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
+  --gradient-accent:     linear-gradient(135deg, #06b6d4, #22d3ee);
+  --gradient-warm:       linear-gradient(135deg, #f59e0b, #fbbf24);
+  --gradient-hero:       linear-gradient(135deg, #6366f1 0%, #8b5cf6 30%, #06b6d4 70%, #22d3ee 100%);
+  --gradient-text:       linear-gradient(135deg, #818cf8, #22d3ee);
+  --gradient-surface:    linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+  --gradient-glow:       radial-gradient(ellipse at center, var(--primary-glow) 0%, transparent 70%);
+  
+  /* Glass */
+  --glass-bg:         rgba(19, 19, 33, 0.60);
+  --glass-bg-hover:   rgba(26, 26, 46, 0.75);
+  --glass-border:     rgba(255, 255, 255, 0.08);
+  --glass-blur:       16px;
+  
+  /* ---- TYPOGRAPHY ---- */
+  --font-display:   'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body:      'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  
+  /* Font Sizes — fluid with clamp */
+  --text-xs:    clamp(0.70rem, 0.65rem + 0.25vw, 0.75rem);
+  --text-sm:    clamp(0.80rem, 0.75rem + 0.25vw, 0.875rem);
+  --text-base:  clamp(0.90rem, 0.85rem + 0.25vw, 1rem);
+  --text-lg:    clamp(1.05rem, 0.95rem + 0.50vw, 1.25rem);
+  --text-xl:    clamp(1.20rem, 1.05rem + 0.75vw, 1.50rem);
+  --text-2xl:   clamp(1.50rem, 1.20rem + 1.50vw, 2.00rem);
+  --text-3xl:   clamp(1.80rem, 1.40rem + 2.00vw, 2.50rem);
+  --text-4xl:   clamp(2.20rem, 1.60rem + 3.00vw, 3.50rem);
+  --text-5xl:   clamp(2.80rem, 1.80rem + 5.00vw, 5.00rem);
+  --text-hero:  clamp(3.20rem, 2.00rem + 6.00vw, 6.50rem);
+  
+  /* Font Weights */
+  --weight-light:    300;
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  
+  /* Line Heights */
+  --leading-tight:   1.15;
+  --leading-snug:    1.3;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.8;
+  
+  /* Letter Spacing */
+  --tracking-tight:  -0.03em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.05em;
+  --tracking-wider:  0.10em;
+  --tracking-widest: 0.20em;
+  
+  /* ---- SPACING ---- */
+  --space-1:   0.25rem;   /* 4px */
+  --space-2:   0.50rem;   /* 8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1.00rem;   /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.50rem;   /* 24px */
+  --space-8:   2.00rem;   /* 32px */
+  --space-10:  2.50rem;   /* 40px */
+  --space-12:  3.00rem;   /* 48px */
+  --space-16:  4.00rem;   /* 64px */
+  --space-20:  5.00rem;   /* 80px */
+  --space-24:  6.00rem;   /* 96px */
+  --space-32:  8.00rem;   /* 128px */
+  
+  /* Section padding */
+  --section-padding-y:  clamp(4rem, 8vw, 8rem);
+  --section-padding-x:  clamp(1.5rem, 5vw, 4rem);
+  --container-max:      1200px;
+  --container-narrow:   800px;
+  
+  /* ---- BORDERS & RADIUS ---- */
+  --radius-sm:    6px;
+  --radius-md:    10px;
+  --radius-lg:    16px;
+  --radius-xl:    24px;
+  --radius-2xl:   32px;
+  --radius-full:  9999px;
+  
+  /* ---- SHADOWS ---- */
+  --shadow-sm:     0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md:     0 4px 14px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-lg:     0 10px 40px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-xl:     0 20px 60px rgba(0, 0, 0, 0.5), 0 8px 20px rgba(0, 0, 0, 0.35);
+  --shadow-glow:   0 0 30px var(--primary-glow), 0 0 60px rgba(99, 102, 241, 0.10);
+  --shadow-accent: 0 0 30px var(--accent-glow), 0 0 60px rgba(6, 182, 212, 0.10);
+  
+  /* ---- TRANSITIONS ---- */
+  --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back:    cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-in-out-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:      cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  --duration-fast:    150ms;
+  --duration-normal:  300ms;
+  --duration-slow:    500ms;
+  --duration-slower:  800ms;
+  
+  /* ---- Z-INDEX LAYERS ---- */
+  --z-behind:     -1;
+  --z-base:       1;
+  --z-dropdown:   100;
+  --z-sticky:     200;
+  --z-nav:        500;
+  --z-overlay:    700;
+  --z-modal:      900;
+  --z-cursor:     1000;
+  --z-preloader:  9999;
+}
