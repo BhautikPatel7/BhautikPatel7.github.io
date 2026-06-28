@@ -63,6 +63,7 @@
 
 /* Card accent colors */
 .skills__card--ai       { --card-accent: linear-gradient(90deg, #6366f1, #8b5cf6); }
+.skills__card--llm      { --card-accent: linear-gradient(90deg, #0ea5e9, #14b8a6); }
 .skills__card--framework { --card-accent: linear-gradient(90deg, #8b5cf6, #a78bfa); }
 .skills__card--lang     { --card-accent: linear-gradient(90deg, #06b6d4, #22d3ee); }
 .skills__card--backend  { --card-accent: linear-gradient(90deg, #10b981, #34d399); }
@@ -108,6 +109,7 @@
 }
 
 .skills__card--ai .skills__card-icon       { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+.skills__card--llm .skills__card-icon      { background: rgba(14, 165, 233, 0.15); color: #38bdf8; }
 .skills__card--framework .skills__card-icon { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
 .skills__card--lang .skills__card-icon      { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
 .skills__card--backend .skills__card-icon   { background: rgba(16, 185, 129, 0.15); color: #34d399; }
@@ -170,6 +172,18 @@
   color: #c7d2fe;
 }
 
+/* Special: LLM card highlighted tag */
+.skills__card--llm .skills__tag {
+  background: rgba(14, 165, 233, 0.08);
+  border-color: rgba(14, 165, 233, 0.12);
+}
+
+.skills__card--llm .skills__tag:hover {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.28);
+  color: #7dd3fc;
+}
+
 /* ---- AI card special large styling ---- */
 
 .skills__card--ai {
@@ -195,6 +209,34 @@
   width: 160px;
   height: 160px;
   background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- LLM card special large styling ---- */
+
+.skills__card--llm {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.06), rgba(20, 184, 166, 0.04), var(--glass-bg));
+  border-color: rgba(14, 165, 233, 0.12);
+}
+
+.skills__card--llm:hover {
+  border-color: rgba(14, 165, 233, 0.28);
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.12);
+}
+
+.skills__card--llm .skills__card-title {
+  font-size: var(--text-lg);
+}
+
+/* LLM card glow decoration */
+.skills__card--llm::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.09) 0%, transparent 70%);
   pointer-events: none;
 }
 
