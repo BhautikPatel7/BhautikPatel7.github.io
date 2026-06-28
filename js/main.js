@@ -251,4 +251,31 @@ document.addEventListener('DOMContentLoaded', () => {
     '╚══════════════════════════════════════╝'
   ].join('\n'), 'color: #6366f1; font-family: monospace; font-size: 12px;');
 
+  // ---- Project Filter ----
+  const filterBtns = document.querySelectorAll('.projects__filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  if (filterBtns.length > 0 && projectCards.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const categories = (card.getAttribute('data-category') || '').split(' ');
+          const matches = filter === 'all' || categories.includes(filter);
+
+          if (matches) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
 });
