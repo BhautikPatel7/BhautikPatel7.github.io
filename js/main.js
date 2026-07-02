@@ -278,4 +278,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---- Other Projects Filter ----
+  const otherFilterBtns = document.querySelectorAll('.other-projects__filter-btn');
+  const miniCards = document.querySelectorAll('.mini-card:not(.mini-card--add)');
+
+  if (otherFilterBtns.length > 0 && miniCards.length > 0) {
+    otherFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        otherFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        miniCards.forEach(card => {
+          const categories = (card.getAttribute('data-category') || '').split(' ');
+          const matches = filter === 'all' || categories.includes(filter);
+
+          if (matches) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
 });

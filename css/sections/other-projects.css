@@ -17,6 +17,43 @@
   background: linear-gradient(90deg, transparent, var(--border-default), transparent);
 }
 
+/* ---- Filter Bar ---- */
+
+.other-projects__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+.other-projects__filter-btn {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border-default);
+  transition: all 0.3s var(--ease-out-expo);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.other-projects__filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.other-projects__filter-btn.active {
+  color: var(--bg-base);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
 /* ---- Projects Grid ---- */
 
 .other-projects__grid {
@@ -40,6 +77,10 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.mini-card.hidden {
+  display: none !important;
 }
 
 .mini-card::before {
@@ -69,6 +110,8 @@
 .mini-card--web     { --card-accent: linear-gradient(90deg, #f59e0b, #fbbf24); }
 .mini-card--api     { --card-accent: linear-gradient(90deg, #10b981, #34d399); }
 .mini-card--other   { --card-accent: linear-gradient(90deg, #6366f1, #8b5cf6); }
+.mini-card--game    { --card-accent: linear-gradient(90deg, #ec4899, #f43f5e); }
+.mini-card--data    { --card-accent: linear-gradient(90deg, #14b8a6, #0ea5e9); }
 
 /* Card header */
 .mini-card__header {
@@ -93,6 +136,8 @@
 .mini-card--web .mini-card__icon     { background: rgba(245, 158, 11, 0.12); color: #fbbf24; }
 .mini-card--api .mini-card__icon     { background: rgba(16, 185, 129, 0.12); color: #34d399; }
 .mini-card--other .mini-card__icon   { background: rgba(99, 102, 241, 0.12); color: #818cf8; }
+.mini-card--game .mini-card__icon    { background: rgba(236, 72, 153, 0.12); color: #f472b6; }
+.mini-card--data .mini-card__icon    { background: rgba(20, 184, 166, 0.12); color: #2dd4bf; }
 
 .mini-card__links-top {
   display: flex;

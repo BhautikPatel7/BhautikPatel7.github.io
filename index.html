@@ -1004,10 +1004,20 @@
         <span class="section-label reveal-wipe">more work</span>
         <h2 class="section-title reveal">Other <span class="gradient-text">Projects</span></h2>
 
+        <!-- Other Projects Filters -->
+        <div class="other-projects__filters reveal-wipe">
+          <button class="other-projects__filter-btn active" data-filter="all">All</button>
+          <button class="other-projects__filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="other-projects__filter-btn" data-filter="flutter">Flutter</button>
+          <button class="other-projects__filter-btn" data-filter="game">Games</button>
+          <button class="other-projects__filter-btn" data-filter="data">Data/Dashboard</button>
+          <button class="other-projects__filter-btn" data-filter="web">Web</button>
+        </div>
+
         <div class="other-projects__grid">
 
           <!-- Flutter Expense Manager -->
-          <div class="mini-card mini-card--flutter reveal">
+          <div class="mini-card mini-card--flutter reveal" data-category="mobile flutter">
             <div class="mini-card__header">
               <div class="mini-card__icon">
                 <i class="fa-solid fa-mobile-screen-button"></i>
@@ -1031,7 +1041,7 @@
           </div>
 
           <!-- Web Portfolio (this site) -->
-          <div class="mini-card mini-card--web reveal stagger-1">
+          <div class="mini-card mini-card--web reveal stagger-1" data-category="web">
             <div class="mini-card__header">
               <div class="mini-card__icon">
                 <i class="fa-solid fa-globe"></i>
@@ -1050,8 +1060,68 @@
             </div>
           </div>
 
+          <!-- Paradox Lite -->
+          <div class="mini-card mini-card--flutter reveal stagger-2" data-category="mobile flutter">
+            <div class="mini-card__header">
+              <div class="mini-card__icon">
+                <i class="fa-solid fa-boxes-packing"></i>
+              </div>
+              <div class="mini-card__links-top">
+              </div>
+            </div>
+            <h3 class="mini-card__title">Paradox Lite</h3>
+            <p class="mini-card__desc">A Flutter mobile application (Android &amp; iOS) for an Australian client to monitor warehouse lifecycle logs, new stock orders, and statuses.</p>
+            <div class="mini-card__tech">
+              <span class="pill">Flutter</span>
+              <span class="pill">Dart</span>
+              <span class="pill">Android</span>
+              <span class="pill">iOS</span>
+            </div>
+          </div>
+
+          <!-- Ecoquest -->
+          <div class="mini-card mini-card--game reveal stagger-3" data-category="mobile flutter game">
+            <div class="mini-card__header">
+              <div class="mini-card__icon">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <div class="mini-card__links-top">
+                <a href="https://play.google.com/store/apps/details?id=com.plusinfosys.ecoquest&hl=en" target="_blank" rel="noopener noreferrer" class="mini-card__link-icon" aria-label="Play Store"><i class="fa-brands fa-google-play"></i></a>
+              </div>
+            </div>
+            <h3 class="mini-card__title">Ecoquest</h3>
+            <p class="mini-card__desc">A 7-level educational game for kids built using the Flame game engine in Flutter. Available on the Google Play Store.</p>
+            <div class="mini-card__tech">
+              <span class="pill">Flutter</span>
+              <span class="pill">Flame Engine</span>
+              <span class="pill">Game Dev</span>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.plusinfosys.ecoquest&hl=en" target="_blank" rel="noopener noreferrer" class="mini-card__badge">
+              <i class="fa-brands fa-google-play"></i> Available on Play Store
+            </a>
+          </div>
+
+          <!-- Tradex -->
+          <div class="mini-card mini-card--data reveal stagger-4" data-category="mobile data firebase">
+            <div class="mini-card__header">
+              <div class="mini-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="mini-card__links-top">
+              </div>
+            </div>
+            <h3 class="mini-card__title">Tradex</h3>
+            <p class="mini-card__desc">A mobile dashboard app that visualizes scraped government import/export data. Features custom alerts and push notifications via Firebase for data updates.</p>
+            <div class="mini-card__tech">
+              <span class="pill">Mobile Dev</span>
+              <span class="pill">Data Viz</span>
+              <span class="pill">Web Scraping</span>
+              <span class="pill">Firebase</span>
+            </div>
+          </div>
+
           <!-- Add More Placeholder -->
-          <div class="mini-card mini-card--add reveal stagger-2">
+          <div class="mini-card mini-card--add reveal stagger-5">
             <div class="mini-card__add-icon">
               <i class="fa-solid fa-plus"></i>
             </div>
