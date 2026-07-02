@@ -110,6 +110,7 @@
 .project-card--genai:hover    { box-shadow: var(--shadow-xl), 0 0 40px rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.25); }
 .project-card--agentic:hover  { box-shadow: var(--shadow-xl), 0 0 40px rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.25); }
 .project-card--dl:hover       { box-shadow: var(--shadow-xl), 0 0 40px rgba(99, 102, 241, 0.12); border-color: rgba(99, 102, 241, 0.25); }
+.project-card--n8n:hover      { box-shadow: var(--shadow-xl), 0 0 40px rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.25); }
 
 /* Image area */
 .project-card__image {
@@ -145,6 +146,7 @@
 .project-card--genai .project-card__image-placeholder    { background: linear-gradient(135deg, #150e28 0%, #1a0c33 50%, #150e28 100%); color: rgba(139, 92, 246, 0.3); }
 .project-card--agentic .project-card__image-placeholder  { background: linear-gradient(135deg, #1a0e18 0%, #220c1a 50%, #1a0e18 100%); color: rgba(244, 63, 94, 0.3); }
 .project-card--dl .project-card__image-placeholder       { background: linear-gradient(135deg, #0e1028 0%, #141033 50%, #0e1028 100%); color: rgba(99, 102, 241, 0.3); }
+.project-card--n8n .project-card__image-placeholder      { background: linear-gradient(135deg, #1a1200 0%, #2a1a00 50%, #1a1200 100%); color: rgba(245, 158, 11, 0.3); }
 
 /* Category badge on image */
 .project-card__category {
@@ -167,6 +169,7 @@
 .project-card--genai .project-card__category    { background: rgba(139, 92, 246, 0.20); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.2); }
 .project-card--agentic .project-card__category  { background: rgba(244, 63, 94, 0.20); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.2); }
 .project-card--dl .project-card__category       { background: rgba(99, 102, 241, 0.20); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.2); }
+.project-card--n8n .project-card__category      { background: rgba(245, 158, 11, 0.20); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
 
 /* Card body */
 .project-card__body {
@@ -304,6 +307,13 @@
   border-color: rgba(6, 182, 212, 0.25);
 }
 
+/* Amber variant — for N8N / automation badges */
+.project-card__live-badge--amber {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
@@ -382,6 +392,17 @@
 .project-card__mode--phase:hover {
   background: rgba(6, 182, 212, 0.05);
   border-color: rgba(6, 182, 212, 0.2);
+}
+
+/* N8N mode — amber icon color */
+.project-card__mode-icon--n8n {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.project-card--n8n .project-card__mode:hover {
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.2);
 }
 
 /* ---- CV Challenges Solved Panel ---- */

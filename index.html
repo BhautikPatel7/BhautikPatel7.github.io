@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -551,6 +551,7 @@
           <button class="projects__filter-btn" data-filter="genai">Generative AI</button>
           <button class="projects__filter-btn" data-filter="agentic">Agentic AI</button>
           <button class="projects__filter-btn" data-filter="dl">Deep Learning</button>
+          <button class="projects__filter-btn" data-filter="n8n">N8N</button>
         </div>
 
         <!-- Projects Grid -->
@@ -839,6 +840,76 @@
                 <span class="pill">UI Prototyping</span>
                 <span class="pill">SRS Analysis</span>
                 <span class="pill">Vector DB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 6: HR Email Classifier — N8N Automation -->
+          <div class="project-card project-card--n8n project-card--featured reveal-flip stagger-5" data-category="n8n">
+            <div class="project-card__image">
+              <div class="project-card__image-placeholder">
+                <i class="fa-solid fa-envelope-open-text"></i>
+              </div>
+              <span class="project-card__category">N8N · AI Automation</span>
+              <span class="project-card__live-badge project-card__live-badge--amber"><i class="fa-solid fa-circle"></i> 300–500 Emails/Day</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">HR Email Classifier — N8N Automation</h3>
+              <p class="project-card__desc">
+                A fully automated daily email processing pipeline built in <strong>N8N</strong> for a <strong>Pharmaceutical company</strong> receiving 300–500 job application emails per day. Eliminates manual HR screening by automatically reading, extracting, and structuring all candidate data into a Google Sheet — every morning, on schedule.
+              </p>
+
+              <div class="project-card__modes">
+
+                <div class="project-card__mode">
+                  <div class="project-card__mode-header">
+                    <span class="project-card__mode-icon project-card__mode-icon--n8n"><i class="fa-solid fa-clock"></i></span>
+                    <span class="project-card__mode-title">Daily Scheduled Trigger</span>
+                  </div>
+                  <p class="project-card__mode-desc">A <strong>daily scheduler</strong> automatically triggers the flow each morning — fetching all emails received in the last 24 hours from the HR inbox, including every attachment, so nothing is missed.</p>
+                </div>
+
+                <div class="project-card__mode">
+                  <div class="project-card__mode-header">
+                    <span class="project-card__mode-icon project-card__mode-icon--n8n"><i class="fa-solid fa-file-arrow-down"></i></span>
+                    <span class="project-card__mode-title">Multi-Format Attachment Extraction</span>
+                  </div>
+                  <p class="project-card__mode-desc">Handles all common resume formats — <strong>PDF, DOCX, TXT</strong> — extracting raw text directly. For image-based resumes or scanned documents, the flow passes them to an <strong>LLM vision model</strong> to extract candidate details with high accuracy.</p>
+                </div>
+
+                <div class="project-card__mode">
+                  <div class="project-card__mode-header">
+                    <span class="project-card__mode-icon project-card__mode-icon--n8n"><i class="fa-solid fa-robot"></i></span>
+                    <span class="project-card__mode-title">LLM-Powered Data Parsing</span>
+                  </div>
+                  <p class="project-card__mode-desc">Email body text and extracted resume content are processed by an <strong>LLM</strong> to intelligently parse candidate name, contact details, skills, experience, applied role, and other key fields — even from unstructured or inconsistently formatted emails.</p>
+                </div>
+
+                <div class="project-card__mode">
+                  <div class="project-card__mode-header">
+                    <span class="project-card__mode-icon project-card__mode-icon--n8n"><i class="fa-solid fa-table"></i></span>
+                    <span class="project-card__mode-title">Auto Google Sheet Export</span>
+                  </div>
+                  <p class="project-card__mode-desc">All structured candidate data is <strong>automatically appended to a Google Sheet</strong> — giving the HR team a clean, sortable, filterable view of every applicant every morning. Zero manual data entry required.</p>
+                </div>
+
+              </div>
+
+              <div class="project-card__metrics">
+                <div class="project-card__metric"><span class="project-card__metric-value">500+</span><span class="project-card__metric-label">Emails/Day</span></div>
+                <div class="project-card__metric"><span class="project-card__metric-value">0</span><span class="project-card__metric-label">Manual Work</span></div>
+                <div class="project-card__metric"><span class="project-card__metric-value">Daily</span><span class="project-card__metric-label">Scheduled</span></div>
+              </div>
+
+              <div class="project-card__tech">
+                <span class="pill">N8N</span>
+                <span class="pill">LLM</span>
+                <span class="pill">Vision Model</span>
+                <span class="pill">PDF Extraction</span>
+                <span class="pill">DOCX Parsing</span>
+                <span class="pill">Google Sheets</span>
+                <span class="pill">Email Automation</span>
+                <span class="pill">Daily Scheduler</span>
               </div>
             </div>
           </div>
